@@ -81,7 +81,7 @@ window.VALLORE_ASSETS = {
 function vA(n){return (window.VALLORE_ASSETS&&window.VALLORE_ASSETS[n])||n;}
 </script>
 </head>
-<body data-view="product">
+<body data-view="{% if request.page_type == 'product' %}product{% else %}home{% endif %}">
 {{ content_for_layout }}
 </body>
 </html>

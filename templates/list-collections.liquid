@@ -1,0 +1,4 @@
+<div class="wrap" style="max-width:760px;margin:0 auto;padding:48px 20px">
+  <h1 style="font-family:'Fraunces',serif;color:#40162C">Collections</h1>
+  <ul style="margin-top:16px;line-height:2">{% for collection in collections %}<li><a href="{{ collection.url }}" style="color:#B6425B">{{ collection.title }}</a></li>{% endfor %}</ul>
+</div>

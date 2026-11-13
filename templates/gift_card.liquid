@@ -1,0 +1,5 @@
+<div class="wrap" style="max-width:520px;margin:0 auto;padding:60px 20px;text-align:center">
+  <h1 style="font-family:'Fraunces',serif;color:#40162C">{{ shop.name }} gift card</h1>
+  <p style="font-size:28px;font-weight:800;color:#B6425B;margin:20px 0">{{ gift_card.balance | money }}</p>
+  <p style="color:#7A636B">Code: <b>{{ gift_card.code | format_code }}</b></p>
+</div>

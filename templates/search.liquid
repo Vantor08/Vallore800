@@ -1,0 +1,8 @@
+<div class="wrap" style="max-width:760px;margin:0 auto;padding:48px 20px">
+  <h1 style="font-family:'Fraunces',serif;color:#40162C">Search</h1>
+  <form action="{{ routes.search_url }}" method="get" style="margin:16px 0">
+    <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="Search the store" style="width:100%;padding:13px 16px;border:1px solid #ECDED9;border-radius:12px">
+  </form>
+  {% if search.performed %}<p style="color:#7A636B">{{ search.results_count }} result(s)</p>
+  {% for item in search.results %}<div style="padding:12px 0;border-bottom:1px solid #ECDED9"><a href="{{ item.url }}" style="color:#B6425B">{{ item.title }}</a></div>{% endfor %}{% endif %}
+</div>

@@ -1,0 +1,11 @@
+<div class="wrap" style="padding:48px 20px">
+  <h1 style="font-family:'Fraunces',serif;color:#40162C">{{ collection.title }}</h1>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:22px;margin-top:24px">
+    {% for product in collection.products %}
+    <a href="{{ product.url }}" style="text-decoration:none;color:inherit">
+      {% if product.featured_image %}<img src="{{ product.featured_image | image_url: width: 500 }}" style="width:100%;border-radius:14px">{% endif %}
+      <div style="margin-top:10px"><b style="color:#40162C">{{ product.title }}</b><br><span style="color:#7A636B">{{ product.price | money }}</span></div>
+    </a>
+    {% else %}<p style="color:#7A636B">No products yet.</p>{% endfor %}
+  </div>
+</div>
